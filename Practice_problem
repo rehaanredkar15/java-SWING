@@ -1,0 +1,64 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+        int[] tr1 = new int[3];
+        int[] tr2 = new int[3];
+        int[] tr3 = new int[3];
+        for(int i=0;i<3;i++)
+        {
+                tr1[i] = sc.nextInt();
+                tr2[i] = sc.nextInt();
+                tr3[i] = sc.nextInt();
+
+        }
+        for(int j = 0 ; j < 3 ; j++)
+        {
+
+            count1 = count1 + tr1[j];
+            count2 = count2 + tr2[j];
+            count3 = count3 + tr3[j];
+
+        }
+
+        if(count1 > count2)
+        {
+            if (count1 >count3) {
+                System.out.println("trainee no 1");
+            }
+            else if(count1 == count3)
+            {
+                System.out.println("trainee no 1");
+                System.out.println("trainee no 3");
+
+            }
+            else if (count3 > count1) {
+                System.out.println("trainee no 3");
+            }
+        }
+        else if(count2 > count1)
+            {
+                if(count2 > count3)
+                {
+                    System.out.println("trainee no 2");
+                }
+                else if(count2 == count3)
+                {
+                    System.out.println("trainee no 2");
+                    System.out.println("trainee no 3");
+
+                }
+                else
+                {
+                    System.out.println("The third trainee is the fittest");
+                }
+            }
+        }
+
+
+    }
